@@ -12,7 +12,7 @@ is generated. To achieve this, you need to override the Access Token generation 
 
 1. Create a new `AccessToken` class (see [app/Passport/AccessToken.php](https://github.com/charlie-waddell/nutickets-passport-example/blob/main/app/Passport/AccessToken.php#L57-L58)). This is where you will add the custom name and email Claims.
 2. Create a new `AccessTokenRepository` class, and override the `getNewToken` method to return an instance of your new`AccessToken` (see [app/Passport/AccessTokenRepository.php](https://github.com/charlie-waddell/nutickets-passport-example/blob/main/app/Passport/AccessTokenRepository.php)).
-3. In your `AuthServiceProvider`, register your new `AccessTokenRepository` by binding it to `Laravel\Passport\Bridge\AccessTokenRepository::class` (see [app/Providers/AuthServiceProvider.php](https://github.com/charlie-waddell/nutickets-passport-example/blob/main/app/Providers/AuthServiceProvider.php)).
+3. In your `AuthServiceProvider`, register your new `AccessTokenRepository` by binding it to `Laravel\Passport\Bridge\AccessTokenRepository::class` (see [app/Providers/AuthServiceProvider.php](https://github.com/charlie-waddell/nutickets-passport-example/blob/main/app/Providers/AuthServiceProvider.php#L35-L42)).
    ```php
    use App\Passport\AccessTokenRepository;
    use Laravel\Passport\Bridge;
